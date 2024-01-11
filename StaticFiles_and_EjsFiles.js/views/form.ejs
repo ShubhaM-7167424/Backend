@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/form.css">
+</head>
+<body>
+        <h1 id="title">Survey Form</h1>
+        <p id="description">This is a mock survey form, using HTML and CSS to showcase proficiency.</p>
+        <form id="survey-form">
+            <label class="form-label" for="name" id="name-label"><%= Name%></label>
+            <input class="user-input" id="name" type="text" placeholder="John Doe" required>
+
+            <label class="form-label" for="email" id="email-label">Email</label>
+            <input class="user-input" id="email" type="email" placeholder="jdoe@email.com" required>
+
+            <label class="form-label" for="number" id="number-label">Age</label>
+            <input class="user-input" id="number" type="number" min="1" max="99" placeholder="0">
+
+            <label class="form-label" for="dropdown">Favorite <%= food%>?</label>
+            <select id="dropdown" class="user-input">
+                <option class="user-input" disabled selected>Favorite food...</option>
+                <option class="user-input">Pizza</option>
+                <option class="user-input">Nachos</option>
+                <option class="user-input">Salad</option>
+                <option class="user-input">Dessert Cakes</option>
+            </select>
+
+            <label class="form-label">Does your vessel require fulfillment?</label>
+
+            <div class="radio-btn-holder">
+                <input class="user-input radio-btn-input" id="btn-yes" name="food-bool" type="radio" value="radio-btn-yes" placeholder="Yes">
+                <label for="btn-yes" class="radio-btn-label">Yes</label>
+            </div>
+
+            <div class="radio-btn-holder">
+                <input class="user-input radio-btn-input" id="btn-no" name="food-bool" type="radio" value="radio-btn-no" placeholder="No">
+                <label for="btn-no" class="radio-btn-label">No</label>
+            </div>
+
+            <label class="form-label">What do you usually eat daily? <span>multiple selection</span></label>
+
+            <div class="checkbox-holder">
+                <input class="user-input checkbox-input" id="breakfast" name="food-type" type="checkbox" value="food-breakfast" placeholder="Breakfast">
+                <label for="breakfast" class="checkbox-label">Breakfast</label>
+            </div>
+
+            <div class="checkbox-holder">
+                <input class="user-input checkbox-input" id="lunch" name="food-type" type="checkbox" value="food-lunch" placeholder="Lunch">
+                <label for="lunch" class="checkbox-label">Lunch</label>
+            </div>
+
+            <div class="checkbox-holder">
+                <input class="user-input checkbox-input" id="snack" name="food-type" type="checkbox" value="food-snack" placeholder="Snack">
+                <label for="snack" class="checkbox-label">Snack</label>
+            </div>
+
+            <div class="checkbox-holder">
+                <input class="user-input checkbox-input" id="dinner" name="food-type" type="checkbox" value="food-dinner" placeholder="Dinner">
+                <label for="dinner" class="checkbox-label">Dinner</label>
+            </div>
+
+            <div class="checkbox-holder">
+                <input class="user-input checkbox-input" id="dessert" name="food-type" type="checkbox" value="food-dessert" placeholder="Dessert">
+                <label for="dessert" class="checkbox-label"><%= Dessert%></label>
+            </div>
+
+            <label class="form-label" for="comment-label">Anything else to add?</label>
+            <textarea class="user-input" id="comment-label" maxlength="600" placeholder="Additional comments here..."></textarea>
+
+            <div class="submit-holder">
+                <button id="submit" type="submit">Submit</button>
+            </div>
+        </form>
+    </body>
+</html>

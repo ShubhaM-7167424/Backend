@@ -1,0 +1,75 @@
+What is a backend developer ?
+=> Backend developer wo hota hai jo server aur database ko program karta hai.
+
+Why Backend ?
+=> To make website dynamic. or to make website more usable and purposeful for the audience.
+
+Why not Frontend alone ?
+=> Bcz frontend websites are static and are of not much use.
+
+What do we need ?
+=> nodejs, mongodb, mongoosejs, expressjs
+
+1.What is Node.js
+=> Install nodejs
+=> nodejs is a lot of c++ v8 engine code wrapped with javascript code which allows us to make server environment with js.
+=> node(v8 engine c++ code wrapped with javascript)
+
+2. node package manager (npm)
+=> package means lines of code 
+=> installing package means downloading  lines of code for your project
+
+3. express
+=> npm i express
+=> express is used for routing ## GET AND POST
+=> in GET your data is visible in url
+=> in POST your data is not visible in url
+
+
+4. What is expressjs 
+=> it is a package for writing server code.
+=> it is also used for routing.
+
+5. Why expressjs
+=> http is difficult to use , express makes things easier
+
+6.routing => the process of making routes is called routing
+/profile
+/home
+/contact
+/profile/shubham/alkeioiow/dsouioeioqeiouuoq
+
+7. middleware ek aisa function hai jo har route se pehle chalta hai, iska matlab saare routes me koi bhi chale usse pehle middleware chalta hai aur usme likha code pahle execute hota hai 
+
+8. req => req me user ki taraf ka data hota hia jaiseki, device info, location and other things
+
+9. res => res me controls hote hai jinke basis per hum server se response bhej paate hai 
+
+10. next => next is just a push so that our control moves to the next thing which should be executed 
+
+11. kisi bhi middleware ke ander next() chalana compulsory hai nahi to control middleware me hi phas jaayega
+
+12.dynamic route 
+1. /profile/harsh
+1. /profile/harshita
+1. /profile/hardik
+1. /profile/harshit
+
+2. /profile/:username
+
+13. to make any route dynamic you can use : at the place where you want to make it dynamic and to access the value use req.params.username
+
+14.temple engine => ejs is a temple engine which is used for making dynamic html pages
+
+15. ejs setup karne ke liye
+1). ejs install => npm i ejs
+2). configure ejs => app.set("view engine", "ejs")
+3). create a folder named views
+4). make a file with .ejs extension
+5). send ki jagah render karo => render karte waqt views folder ke ander ki file ka naam  likho aur .ejs mat likho 
+
+16. static files setup karne ke liye
+1). create a folder called public
+2). create three folders inside it , images, stylesheets and javascript 
+3). configure static filepath => app.use(express.static('./public'))
+4). understand the path
