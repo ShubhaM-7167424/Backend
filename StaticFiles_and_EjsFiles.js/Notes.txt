@@ -73,3 +73,7 @@ What do we need ?
 2). create three folders inside it , images, stylesheets and javascript 
 3). configure static filepath => app.use(express.static('./public'))
 4). understand the path
+==========================================================================
+
+
+
