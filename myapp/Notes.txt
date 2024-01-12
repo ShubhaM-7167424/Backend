@@ -1,0 +1,34 @@
+1) Express Generator will make the Folder Structure for us, and also writes the basic code needed so that we don't have to do it manually
+
+2) npm i express-generator -g
+3) To create a new app anywhere 
+4) Open cmd move to desktop
+5) create new app using
+6)=> express appname --view=ejs
+
+7) Now use two commands
+8)=> cd appname 
+9)=> npm install
+10) open it on vs code
+
+11) How to run app
+12)=> npx nodemon
+
+13) Previous Code              Code Changes after express-generator
+14) app.get               =>   router.get
+15) npx nodemon filename  =>   npx nodemon 
+********************************************************************
+
+1)MongoDB
+
+2) Code Side      MongoDB Side
+********************************
+3) DB Setup       DB formation
+4) Model          Collection
+5) Schema         Documents 
+
+6) install MongoDB
+7) install mongoosejs
+8) require and setup connection
+9) make Schema
+10)create Model and export 
