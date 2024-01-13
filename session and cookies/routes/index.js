@@ -1,6 +1,7 @@
 var express = require("express");
 var router = express.Router();
 
+// check after deleting sessions
 router.get("/createsession", (req, res) => {
   req.session.ban = true;
   res.send("session created");
@@ -21,7 +22,7 @@ router.get("/destroysession", (req, res) => {
   });
 });
 
-
+// check after deleting cookie
 router.get('/createcookie', (req, res) => {
   res.cookie('age', 28)
   res.send('cookie created');
