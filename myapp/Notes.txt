@@ -1,8 +1,8 @@
 1) Express Generator will make the Folder Structure for us, and also writes the basic code needed so that we don't have to do it manually
 
-2) npm i express-generator -g
+2) do one time in laptop => npm i express-generator -g
 3) To create a new app anywhere 
-4) Open cmd move to desktop
+4) Open cmd moveto oneDrive then move to desktop
 5) create new app using
 6)=> express appname --view=ejs
 
@@ -27,8 +27,38 @@
 4) Model          Collection
 5) Schema         Documents 
 
-6) install MongoDB
-7) install mongoosejs
+6) install MongoDB in you laptop
+7) npm install mongoosejs
 8) require and setup connection
 9) make Schema
 10)create Model and export 
+
+********************************************************************
+understanding sessions 
+=> creating sessions, using sessions across routes and destroying sessions
+
+1) usage => npm i express-session
+2) app.use(session({
+    resave: false,
+    reUninitialized: false,
+    secret: 'adakljklds'
+}))
+3) create session =>  req.session.koibhinaam = koibhivalue
+4) check session  =>  req.session.koibhinaam
+5) destroy session => req.session.destroy
+
+understanding cookies 
+=> creating cookies, using cookies across routes and destroying cookies
+1) npm i cookie-parser  already installed with express generator
+2) create cookie => res.cookie('name', value)
+3) read cookie   => req.cookies.name
+4) clear cookie  => res.clearCookie()
+
+
+
+Client          Server
+=======================
+1)cookie        session
+
+if data is saved in the browser it is called cookie
+if data is saved in the server it is called session 

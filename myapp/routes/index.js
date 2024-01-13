@@ -1,41 +1,41 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
-let userModel = require('./users')
 
-router.get('/create', async(req, res)=>{
-  const usercreated = await userModel.create(
-    {
-      username: "Seema3283",
-      name: "Seema",
-      age: 1732,
-    },
-    {
-      username: "Rahul823",
-      name: "Rahul",
-      age: 3600,
-    },
-    {
-      username: "Vijay223",
-      name: "Vijay",
-      age: 1900,
-    }
-  );
-  res.send(usercreated)
+router.get("/createsession", (req, res) => {
+  req.session.ban = true;
+  res.send("session created");
+});
+
+router.get("/checksession", (req, res) => {
+  if (req.session.ban === true) {
+    res.send("you are banned");
+  } else {
+    res.send("not banned");
+  }
+});
+
+router.get("/destroysession", (req, res) => {
+  req.session.destroy(function (err) {
+    if (err) throw err;
+    res.send("session destroyed");
+  });
+});
+
+
+router.get('/createcookie', (req, res) => {
+  res.cookie('age', 28)
+  res.send('cookie created');
 })
 
-router.get('/findall', async (req, res)=>{
-  const alluser = await userModel.find()
-  res.send(alluser)
+router.get('/readcookie', (req, res) => {
+  console.log(req.cookies);
+  console.log(req.cookies.age);
+  res.send('read cookies on terminal')
 })
 
-router.get('/findone',async (req, res)=>{
-  const oneuser = await userModel.findOne({name: 'Seema'})
-  res.send(oneuser)
-})
-
-router.get('/delete', async (req, res)=>{
-  const deleteduser = await userModel.findOneAndDelete({username: 'Rahul823', name: 'Seema' })
-  res.send(deleteduser)
+router.get('/deletecookie', (req, res) => {
+  res.clearCookie('age')
+  res.send('cookie deleted');
 })
 
 module.exports = router;
