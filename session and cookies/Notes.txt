@@ -62,3 +62,12 @@ Client          Server
 
 if data is saved in the browser it is called cookie
 if data is saved in the server it is called session 
+
+
+*********************************************************
+Flash Message
+
+Life Goal 
+1. I will earn a salary of 10ctc in 2 years
+2. I will be fit in next six month
+3. I will quite all social media 
