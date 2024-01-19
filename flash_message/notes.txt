@@ -1,0 +1,17 @@
+1. Flash Messages
+*********************
+=> flash message ka matlab sever ke kisi route me koi data banana and us data ko doosre route me use kar paana 
+
+2. jab bhi aap kisi ejs page ko dekhenge waha par aapko kisi prakar ka koi information 
+dena hai , wo kehlata hai flash messages, they are more like good looking alerts, warning and description
+
+3.Process
+************
+1. install connect-flash
+2. make sure you setup express-session
+3. make sure you put connect flash in app.use function
+4. kisi bhi route me flash create karna hai
+5. kisi bhi doosre route par app usee chalane ka try karein
+6. aap connect flash use nahi kar sakte bina express-session ke 
+
+6. hum log chahate hai ki jab ham kisi route par jaye jaise ki /failed router par ek flash message bane aur wo flash message hum logo ko / route par dikhe ejs mein 
