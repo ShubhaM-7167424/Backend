@@ -17,13 +17,11 @@ router.get("/create", async (req, res) => {
   res.send(user);
 });
 
-// 3. How can i search for documents within  a specific date range in Mongoose
+// 3. How can i filter documents based on the existence of a field in Mongoose?
 
 router.get('/find', async (req, res) => {
-  let date1 = new Date('2024-01-26')
-  let date2 = new Date('2024-01-27')
 
-  const user  = await userModel.find({datecreated: {$gte: date1, $lte: date2}})
+  const user  = await userModel.find({description: {$exists: true}})
   res.send(user)
 })
 
