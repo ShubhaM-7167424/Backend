@@ -17,18 +17,13 @@ router.get("/create", async (req, res) => {
   res.send(user);
 });
 
+// 2. How do i found documents where an array field contains all of a set of values 
 router.get('/find', async (req, res) => {
-  const regex = new RegExp('^haRsHi$', 'i')
-  const user  = await userModel.find({username: regex})
+  const user  = await userModel.find({categories: {$all: ['life', 'travel']}})
   res.send(user)
 })
 
-router.get('/delete', async (req, res) => {
-  const user = await userModel.findOneAndDelete({
-    _id: "65b36b8face10e48873505d3",
-  });
-  res.send(user)
-})
+
 
 
 
