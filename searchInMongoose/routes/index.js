@@ -17,15 +17,33 @@ router.get("/create", async (req, res) => {
   res.send(user);
 });
 
-// 3. How can i filter documents based on the existence of a field in Mongoose?
+// 5. How can i filter documents based on a specific field's length in Mongoose? 
 
-router.get('/find', async (req, res) => {
+// router.get("/find", async (req, res) => {
+ 
+//   const user = await userModel.find({ 
+//     $expr: {
+//       $and:[
+//         {$gte: [{$strLenCP: '$nickname'}, 14]},
+//         {$lte: [{$strLenCP: '$nickname'}, 15]},
+        
+//       ]
+//     }
+//   });
+//   res.send(user);
+// });
 
-  const user  = await userModel.find({description: {$exists: true}})
+router.get("/find", async (req, res) => {
+  const user = await userModel.find({
+    $expr: {
+      $and: [
+        {$gte: [{$strLenCP: '$nickname'}, 0]},
+        {$lte: [{$strLenCP: '$nickname'}, 20]}
+      ]
+    }
+  })
   res.send(user)
 })
-
-
 
 
 
